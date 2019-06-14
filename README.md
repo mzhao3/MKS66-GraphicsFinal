@@ -8,4 +8,5 @@ team name: eos
 ## Features I plan to implement
 - phong / gouraud shading
 - mesh
-- save coordinate system
+   - works if the '.obj' ending is removed
+   - f does not use slashes
