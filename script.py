@@ -209,6 +209,7 @@ def run(filename):
                 #print(command)
                 if command['constants'] and command['constants'] != ":":
                     reflect = command['constants']
+                    args[0] = command['cs']
 
                 add_mesh(tmp, args[0])
                 matrix_mult( stack[-1], tmp )
