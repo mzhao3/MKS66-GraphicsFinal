@@ -1,0 +1,65 @@
+constants shiny_purple 0.3 0.2 0.8 0.3 0 0 0.3 0.2 0.8
+constants brown 0.2 0.7 0.4 0.1 0.4 0.3 0 0 0
+constants red 0 0.5 0.7  0 0 0.6  0 0 0.6
+constants pink 0 0.8 0.8  0 0 0  0 0 0
+constants black_rubber 0.02 0.01 0.4  0.02 0.01 0.4  0.02 0.01 0.4
+constants green_rubber 0.0 0.4 0.04 0.05 0.5 0.7 0.0 0.4 0.04
+constants color0 0.0 0 0.04 0.05 0.5 0 0.0 0.4 0
+constants green 0.0 0.4 0.04 0.5 0.5 0.7 0.0 0 0.04
+constants shiny_white 0.1 0.3 0.7 0.1 0.3 0.7 0.1 0.3 0.7
+constants matte_white 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0
+constants spot_white 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 1.0
+constants even_white 0.0 0.5 0.5 0.0 0.5 0.5 0.0 0.5 0.5
+constants dark_purple 0 0.6 0  0 0 0  0 0.6 0
+constants dark_blue 0 0 0  0 0 0  0 0.6 0
+constants brown2 0.2125 0.714 0.664062 0.1275 0.4284 0.4140626 0.054 0.18144 0.03906
+
+shading phong
+
+push 
+move 225 -150 0
+
+push
+rotate x 5
+scale 0.4 0.4 1
+mesh shiny_white :shelf2
+pop
+
+push
+rotate x 5
+rotate y 15
+push 
+//shading flat
+move -100 340 10 
+scale 0.9 0.9 1 
+mesh shiny_purple:books
+move 0 20 0 
+mesh matte_white :books
+move 0 20 0 
+mesh dark_blue :books
+move 0 20 0 
+mesh red :books
+pop
+pop
+
+push 
+rotate y 15
+push
+move -120 520 50
+scale 0.3 0.3 1
+mesh brown2 :teddy
+pop
+pop
+
+push
+move -100 180 100
+push
+rotate z -80
+rotate x -20
+scale 3 3 1
+mesh green : gourd
+pop
+pop
+
+pop
+save things.png

@@ -10,11 +10,13 @@ def add_mesh(polygons, filename):
     vertices = ["nil"]
 
     for line in lines:
+        
         parse = line.split(" ")
 
         # list of geometric vertices
         # v x y z [w]
         if parse[0] == "v":
+            
             if len(parse) == 4:
                 vertices.append([10 * float(coord) for coord in parse[1:]])
             if len(parse) == 5:
@@ -29,6 +31,7 @@ def add_mesh(polygons, filename):
             vert_ind = []
             for par in parse[1:]:
                 faces = par.split("/")
+                #print(faces)
                 vert_ind.append(int(faces[0]))
             #print(vert_ind)
             v0 = vertices[vert_ind[0]]

@@ -1,0 +1,5 @@
+
+//rotate y 15
+rotate z 45
+mesh :babushka
+save babushka.png
